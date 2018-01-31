@@ -15,11 +15,13 @@ public static void main(String[] args) throws IOException {
 	InputStream is=new FileInputStream(file);
 	byte[] b=new byte[(int) file.length()];
 	is.read(b);
+	is.close();
 	File file1=new File("D:/EAE/øÿ÷∆Ã® ‰»Î.wmv");
 	file1.createNewFile();
 	OutputStream os=new FileOutputStream(file1);
 	/*byte[] abcd=b;*/
 	os.write(b);
+	os.close();
 	System.out.println("success");
 	
 	
